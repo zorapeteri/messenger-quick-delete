@@ -1,6 +1,6 @@
 const icons = {
-  unsend: 'https://www.flaticon.com/svg/static/icons/svg/694/694992.svg',
-  remove: 'https://www.flaticon.com/svg/static/icons/svg/3096/3096687.svg',
+  unsend: 'https://www.flaticon.com/svg/static/icons/svg/3096/3096687.svg',
+  remove: 'https://www.flaticon.com/svg/static/icons/svg/1828/1828778.svg',
 };
 
 const titles = {
@@ -82,10 +82,10 @@ const createButton = (name, clickEvent) => {
 const addButtonsToOutgoingRow = (row) => {
   row.classList.add('messenger-delete-extension--row');
   row.children[0].children[0].appendChild(
-    createButton('unsend', () => deleteOutgoingRow(row, 0)),
+    createButton('remove', () => deleteOutgoingRow(row, 1)),
   );
   row.children[0].children[0].appendChild(
-    createButton('remove', () => deleteOutgoingRow(row, 1)),
+    createButton('unsend', () => deleteOutgoingRow(row, 0)),
   );
 };
 
@@ -113,6 +113,10 @@ const addStyles = () => {
     .messenger-delete-extension--button img {
       height: 1.3em;
       opacity: 0;
+    }
+
+    .messenger-delete-extension--button img[alt="remove"] {
+      height: 1em;
     }
 
     .messenger-delete-extension--row:hover .messenger-delete-extension--button img {

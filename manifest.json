@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Messenger Quick Delete",
+  "description": "Delete your messages on Facebook Messenger quickly and easily.",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": ["*://messenger.com/*", "*://www.messenger.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "icon/16.png",
+      "32": "icon/32.png",
+      "48": "icon/48.png",
+      "128": "icon/128.png"
+    }
+  },
+  "icons": {
+    "16": "icon/16.png",
+    "32": "icon/32.png",
+    "48": "icon/48.png",
+    "128": "icon/128.png"
+  }
+}
